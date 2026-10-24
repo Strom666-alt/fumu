@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="emptyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5D4"/>
+      <stop offset="100%" stop-color="#FF41B4"/>
+    </linearGradient>
+    <filter id="emptyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Two abstract silhouettes facing each other -->
+  <path d="M120 180 Q100 150, 100 120 Q100 90, 130 90 Q160 90, 160 120 Q160 150, 140 180 L140 220 L100 220 Z" fill="rgba(255,255,255,0.08)" stroke="url(#emptyGrad)" stroke-width="2"/>
+  <path d="M280 180 Q300 150, 300 120 Q300 90, 270 90 Q240 90, 240 120 Q240 150, 260 180 L260 220 L300 220 Z" fill="rgba(255,255,255,0.08)" stroke="url(#emptyGrad)" stroke-width="2"/>
+  <!-- Cyan glow between them -->
+  <circle cx="200" cy="150" r="40" fill="url(#emptyGrad)" filter="url(#emptyGlow)" opacity="0.3"/>
+  <circle cx="200" cy="150" r="20" fill="url(#emptyGrad)" filter="url(#emptyGlow)" opacity="0.6"/>
+  <!-- Connection line -->
+  <path d="M160 120 Q200 100, 240 120" stroke="url(#emptyGrad)" stroke-width="2" stroke-dasharray="4,4" opacity="0.5"/>
+  <!-- Small dots -->
+  <circle cx="180" cy="110" r="3" fill="#00F5D4" opacity="0.8"/>
+  <circle cx="220" cy="110" r="3" fill="#FF41B4" opacity="0.8"/>
+  <circle cx="200" cy="130" r="2" fill="#00F5D4" opacity="0.6"/>
+</svg>
